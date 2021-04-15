@@ -123,10 +123,27 @@
     </nav> <!-- end of navbar -->
     <!-- end of navbar -->
 
-
+    <header id="header" class="header" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/header-background.jpg') center center no-repeat;
+background-size: cover;">
+        <div class=" header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>BUSINESS <span id="js-rotating" class="morphext"><span
+                                        class="animated fadeIn">SOLUTIONS</span></span></h1>
+                            <p class="p-heading p-large">Aria is a top consultancy company specializing in business
+                                growth using online marketing and conversion optimization tactics</p>
+                            <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- Header -->
-    <header id="header" class="header">
-        <div class="header-content">
+    <!-- <header id="header" class="header">
+        <div class=" header-content">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -136,12 +153,12 @@
                                 growth using online marketing and conversion optimization tactics</p>
                             <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
                         </div>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of header-content -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
 
 
     <!-- Intro -->
