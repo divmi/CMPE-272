@@ -3,23 +3,9 @@
 
 <head>
     <?php
-$ad_name = "Products/Product8.php"; //comes from $_GET[]
-
-// if the cookie exists, read it and unserialize it. If not, create a blank array
-if (array_key_exists('recentviews', $_COOKIE)) {
-    $cookie = $_COOKIE['recentviews'];
-    $cookie = unserialize($cookie);
-} else {
-    $cookie = array();
-}
-
-// add the value to the array and serialize
-$cookie[] = $ad_name;
-$cookieString = serialize($cookie); /* changed $cookie to $cookieString */
-
-// save the cookie
-setcookie('recentviews', $cookieString, time() + 360000, '/'); /* insert $cookiestring */
-//prints to screen noting
+include '../Cookie.php';
+addLastVisited("CasualWear", "Products/Product8.php");
+addProductIntoDataBase("CasualWear", "Products/Product8.php");
 ?>
     <title>Registration system PHP and MySQL</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"

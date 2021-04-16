@@ -142,22 +142,6 @@ background-size: cover;">
         </div>
     </header>
     <!-- Header -->
-    <!-- <header id="header" class="header">
-        <div class=" header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-                            <h1>BUSINESS <span id="js-rotating">SERVICES, SOLUTIONS</span></h1>
-                            <p class="p-heading p-large">Aria is a top consultancy company specializing in business
-                                growth using online marketing and conversion optimization tactics</p>
-                            <a class="btn-solid-lg page-scroll" href="#intro">DISCOVER</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> -->
 
 
 
@@ -453,30 +437,38 @@ background-size: cover;">
                 <div class="col-lg-12">
                     <div class="section-title">Products</div>
                     <h2>Products That We're Proud Of</h2>
-                    <h4>
-                        Last Visited Pages <br /> </h4>
-                    <p>
-                        <?php
-$counter = 0;
-if (array_key_exists('recentviews', $_COOKIE)) {
-    $cookie = $_COOKIE['recentviews'];
-    $cookie = unserialize($cookie);
-    foreach (array_reverse($cookie) as $h) {
-        if ($counter == 5) {
-            break;
-        }
-        /* changed $_COOKIE['recentviews'] to $cookie */?>
-                        <a href="<?php echo $h ?>">ProductLink </a></br>
-                        <?php
-$counter++;
-    }
-} else {
-    echo "Nothing Found";
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>
+                                Previously Visited Pages <br /> </h4>
+                            <p>
+                                <?php
+include 'Cookie.php';
+$cookie = getLastVisitedAll();
+foreach ($cookie as $key => $value) {?>
+                                <a href="<?php echo $value ?>">Product Link </a></br>
+                                <?php
 }
-
 ?>
-                    </p>
-                </div> <!-- end of col -->
+
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <h4>
+                                Most Popular Products <br /> </h4>
+                            <p>
+                                <?php
+$product = getMostPopularProducts();
+while ($data = mysqli_fetch_array($product)) {?>
+                                <a
+                                    href="<?php echo $data["ProductLink"] ?>"><?php echo $data["ProductName"]; ?></a></br>
+                                <?php
+}
+?>
+                        </div>
+                    </div>
+
+                </div> <!-- end of col $data["ProductName"]  -->
             </div> <!-- end of row -->
 
             <div class="row">
@@ -1109,7 +1101,8 @@ fclose($fp);
                         <div class="form-group checkbox">
                             <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Aria's
                             stated <a href="privacy-policy.php">Privacy Policy</a> and <a
-                                href="terms-conditions.php">Terms Conditions</a>
+                                href="terms-conditions.php">Terms
+                                Conditions</a>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">

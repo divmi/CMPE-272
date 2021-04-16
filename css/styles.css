@@ -753,7 +753,7 @@ input[type="checkbox"] {
   outline: 0;
 }
 
-/* .navbar-custom .dropdown-menu {
+.navbar-custom .dropdown-menu {
   margin-top: 0;
   border: none;
   border-radius: 0.25rem;
@@ -785,7 +785,7 @@ input[type="checkbox"] {
   background-color: #b5bcc4;
   opacity: 0.2;
 }
-/* end of dropdown menu */
+/* end of dropdown menu  */
 
 .navbar-custom .social-icons {
   display: none;
@@ -826,7 +826,7 @@ input[type="checkbox"] {
 /*********************/
 /*    04. Header     */
 /*********************/
-.header {
+.header.lazy {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url("../images/header-background.jpg") center center no-repeat;
   background-size: cover;

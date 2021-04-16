@@ -2,24 +2,6 @@
 include 'DataBaseConnection.php';
 $conn = OpenCon();
 
-// // Escape user inputs for security
-// $first_name = mysqli_real_escape_string($conn, $_REQUEST['firstName']);
-// $last_name = mysqli_real_escape_string($conn, $_REQUEST['lastName']);
-// $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
-// $address = mysqli_real_escape_string($conn, $_REQUEST['address']);
-// $homePhone = mysqli_real_escape_string($conn, $_REQUEST['homePhone']);
-// $cellPhone = mysqli_real_escape_string($conn, $_REQUEST['cellPhone']);
-
-// // Attempt insert query execution
-// $sql = "INSERT INTO UserRegisterationTable (FirstName, LastName, Email, Address,HomePhone,CellPhone) VALUES ('$first_name',
-// '$last_name', '$email', '$address', '$homePhone', '$cellPhone')";
-
-// echo $sql;
-// if(mysqli_query($conn, $sql)){
-//     echo "Records added successfully.";
-// } else{
-//     echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-// }
 function validate($data)
 {
     $data = trim($data);

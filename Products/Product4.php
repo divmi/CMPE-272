@@ -3,23 +3,9 @@
 
 
 <?php
-$ad_name = "Products/Product4.php"; //comes from $_GET[]
-
-// if the cookie exists, read it and unserialize it. If not, create a blank array
-if (array_key_exists('recentviews', $_COOKIE)) {
-    $cookie = $_COOKIE['recentviews'];
-    $cookie = unserialize($cookie);
-} else {
-    $cookie = array();
-}
-
-// add the value to the array and serialize
-$cookie[] = $ad_name;
-$cookieString = serialize($cookie); /* changed $cookie to $cookieString */
-
-// save the cookie
-setcookie('recentviews', $cookieString, time() + 360000, '/'); /* insert $cookiestring */
-//prints to screen noting
+include '../Cookie.php';
+addLastVisited("Photography", "Products/Product4.php");
+addProductIntoDataBase("Photography", "Products/Product4.php");
 ?>
 
 <head>
