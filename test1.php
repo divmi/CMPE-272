@@ -1,7 +1,6 @@
 <?php
 
-include 'DataBaseConnection.php'; // includes the connection.php file to connect to the database
-$conn = OpenCon();
+$conn = mysqli_connect('localhost', 'root', 'Divmi@12345', 'TravelCompany');
 // query to database and prepares and executes
 $query = "SELECT * FROM UserRegisterationTable";
 $result = mysqli_query($conn, $query);
