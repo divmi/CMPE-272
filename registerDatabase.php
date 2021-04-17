@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'Divmi@12345', 'TravelCompany');
+include 'DataBaseConnection.php'; // includes the connection.php file to connect to the database
+$conn = OpenCon();
 
 function validate($data)
 {
@@ -37,6 +38,7 @@ if (empty($first_name)) {
 } else {
 
     $sql = "SELECT * FROM UserRegisterationTable WHERE Email='$email' ";
+    echo $sql;
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
