@@ -14,3 +14,5 @@ try {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
+print("<div><a href='/usersection.html'>Click here to go back to user page</a></div>");
+$conn->close();
