@@ -1,6 +1,6 @@
 <?php
 include 'DataBaseConnection.php';
-$conn = OpenCon();
+$conn = mysqli_connect('localhost', 'root', 'Divmi@12345', 'TravelCompany');
 
 function validate($data)
 {
