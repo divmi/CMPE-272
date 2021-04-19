@@ -176,21 +176,7 @@
 
     <div id="intro" class="basic-1">
         <div class="container">
-
-            <form class="form" action="" method="post">
-                <table style="width: 400px;">
-                    <tbody>
-                        <tr>
-                            <td><input class="form-control" type="search" placeholder="Search" aria-label="Search"
-                                    id="searchValue" name="searchValue" value=""></td>
-                            <td><button class="form-control-submit-button" name="search" type="submit">Search</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
             <div class="row">
-
                 <div class="col-xs-12">
                     <table style="width: 1200px;" class="table table-bordered table-hover">
                         <thead>
