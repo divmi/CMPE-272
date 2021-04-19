@@ -3,7 +3,6 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: GET");
 include 'DataBaseConnection.php';
-
 function getUsers()
 {
     $conn = OpenCon();
@@ -28,7 +27,6 @@ function getUsers()
 
         CloseCon($conn);
     }
-
     return $userArray;
 }
 

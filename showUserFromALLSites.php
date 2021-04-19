@@ -176,24 +176,87 @@
 
     <div id="intro" class="basic-1">
         <div class="container">
-            <table>
-                <tbody>
-                    <tr>
-                        <td> <button type="submit" class="form-control-submit-button"
-                                onclick="document.location='UserRegistrationForm.php'">Join Company</button>
-                        </td>
-                        <td> <button type="submit" class="form-control-submit-button"
-                                onclick="document.location='UserSearchForm.php'">Search a User</button>
-                        </td>
-                        <td> <button type="submit" class="form-control-submit-button"
-                                onclick="document.location='showUserFromALLSites.php'">User From Othersite</button>
-                        </td>
-                    </tr>
 
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <form class="form" action="" method="post">
+                <table style="width: 400px;">
+                    <tbody>
+                        <tr>
+                            <td><input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                                    id="searchValue" name="searchValue" value=""></td>
+                            <td><button class="form-control-submit-button" name="search" type="submit">Search</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <table style="width: 1200px;" class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="success">
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Home Phone</th>
+                                <th>Cell Phone</th>
+                                <th>Site</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <?php
+
+include 'DataBaseConnection.php'; // includes the connection.php file to connect to the database
+$conn = OpenCon();
+$query = "SELECT * FROM UserRegisterationTable";
+$result = mysqli_query($conn, $query);
+
+?>
+                            <?php
+
+while ($data = mysqli_fetch_array($result)) {
+    echo '<tr>';
+    echo '<td>' . $data["FirstName"] . '</td>';
+    echo '<td>' . $data["LastName"] . '</td>';
+    echo '<td>' . $data["Email"] . '</td>';
+    echo '<td>' . $data["Address"] . '</td>';
+    echo '<td>' . $data["HomePhone"] . '</td>';
+    echo '<td>' . $data["CellPhone"] . '</td>';
+    echo '<td>' . "Local" . '</td>';
+    echo '</tr>';
+}
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/users.php");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$contents = curl_exec($ch);
+$jsoned = json_decode($contents, true);
+foreach ($jsoned as $data) {
+    echo '<tr>';
+    echo '<td>' . $data["FirstName"] . '</td>';
+    echo '<td>' . $data["LastName"] . '</td>';
+    echo '<td>' . $data["Email"] . '</td>';
+    echo '<td>' . $data["HomeAddress"] . '</td>';
+    echo '<td>' . $data["HomePhone"] . '</td>';
+    echo '<td>' . $data["CellPhone"] . '</td>';
+    echo '<td>' . "Nate's site" . '</td>';
+    echo '</tr>';
+}
+//echo $contents;
+curl_close($ch);
+
+?>
+                            <table>
+                                <tbody>
+                                    <tr>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                </div>
+            </div>
 </body>
 
 </html>
