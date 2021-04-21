@@ -195,13 +195,10 @@
                             <?php
 
 include 'DataBaseConnection.php'; // includes the connection.php file to connect to the database
+include 'getUser.php';
 $conn = OpenCon();
 $query = "SELECT * FROM UserRegisterationTable";
 $result = mysqli_query($conn, $query);
-
-?>
-                            <?php
-
 while ($data = mysqli_fetch_array($result)) {
     echo '<tr>';
     echo '<td>' . $data["FirstName"] . '</td>';
@@ -213,25 +210,9 @@ while ($data = mysqli_fetch_array($result)) {
     echo '<td>' . "Local" . '</td>';
     echo '</tr>';
 }
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/users.php");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$contents = curl_exec($ch);
-$jsoned = json_decode($contents, true);
-foreach ($jsoned as $data) {
-    echo '<tr>';
-    echo '<td>' . $data["FirstName"] . '</td>';
-    echo '<td>' . $data["LastName"] . '</td>';
-    echo '<td>' . $data["Email"] . '</td>';
-    echo '<td>' . $data["HomeAddress"] . '</td>';
-    echo '<td>' . $data["HomePhone"] . '</td>';
-    echo '<td>' . $data["CellPhone"] . '</td>';
-    echo '<td>' . "Nate's site" . '</td>';
-    echo '</tr>';
-}
-//echo $contents;
-curl_close($ch);
-
+FindCurlUser("http://www.nathandiamond.com/classes/272/company/api/users.php", "Nate's Site");
+FindCurlUser("http://sarahlau-se.com/?page_id=145", "Sarah's Site");
+FindCurlUser("http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com/myusers.php", "Hemakshi's site");
 ?>
                             <table>
                                 <tbody>
