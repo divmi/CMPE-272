@@ -4,8 +4,10 @@
 <head>
     <?php
 include '../Cookie.php';
+include '../review.php';
 addLastVisited("Industry", "Products/Product2.php");
 addProductIntoDataBase("Industry", "Products/Product2.php");
+addLastVistedProductToCommonDB("Product2");
 ?>
     <title>Registration system PHP and MySQL</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
@@ -17,6 +19,10 @@ addProductIntoDataBase("Industry", "Products/Product2.php");
     <link href="../css/swiper.css" rel="stylesheet">
     <link href="../css/magnific-popup.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel='stylesheet'
+        href='https://raw.githubusercontent.com/kartik-v/bootstrap-star-rating/master/css/star-rating.min.css'>
 
     <link rel="icon" href="./images/favicon.png">
     <meta charset="utf-8">
@@ -191,18 +197,23 @@ addProductIntoDataBase("Industry", "Products/Product2.php");
                 <hr class="line-heading">
                 <h6>What is Industry Solution provider</h6>
                 <p>An industry – or sector – is the whole of all economic activities by companies, people, and
-                    organizations involved in the production of goods and services for a particular field. Industries
+                    organizations involved in the production of goods and services for a particular field.
+                    Industries
                     are usually categorized by the goods and services they produce.
                 </p>
                 <h6>Feature provided by our Compamny</h6>
                 <p>Earlier this year, after careful consideration and planning, we added a strategic focus on
                     manufacturing. Given the large number of customers in this industry, and the technological
-                    transformation occurring with our clients in this space, the development of a specialized practice
+                    transformation occurring with our clients in this space, the development of a specialized
+                    practice
                     was a logical move for us. In the coming months, we’ll continue to make investments in our
-                    manufacturing practice with solution development, resources, and employee training. In keeping with
+                    manufacturing practice with solution development, resources, and employee training. In keeping
+                    with
                     our history of hiring for industry-specific experience, we brought on Ryan Spurr to lead the
-                    charge—an industry veteran with over 15 years of manufacturing experience. We’re leveraging Ryan’s
-                    expertise in manufacturing, supply chain, engineering, and quality to transform the way we engage
+                    charge—an industry veteran with over 15 years of manufacturing experience. We’re leveraging
+                    Ryan’s
+                    expertise in manufacturing, supply chain, engineering, and quality to transform the way we
+                    engage
                     with and bring value to our manufacturing clients.
 
                     This is an incredible time to work in technology. Innovation is disrupting entire industries and
@@ -211,16 +222,36 @@ addProductIntoDataBase("Industry", "Products/Product2.php");
                     provider who “speaks the language” and has experts on staff who have line of sight into industry
                     best practices.
 
-                    At Connection, our Industry Solutions Group has that expertise, and we’re working tirelessly to keep
-                    a pulse on healthcare, retail, and manufacturing so we can deliver an experience that will exceed
-                    customer expectations. We hope you can be part of the conversation we’re having in these industries,
-                    whether it be at a partner meeting, customer event, or at an industry meetup. We’re passionate about
+                    At Connection, our Industry Solutions Group has that expertise, and we’re working tirelessly to
+                    keep
+                    a pulse on healthcare, retail, and manufacturing so we can deliver an experience that will
+                    exceed
+                    customer expectations. We hope you can be part of the conversation we’re having in these
+                    industries,
+                    whether it be at a partner meeting, customer event, or at an industry meetup. We’re passionate
+                    about
                     these vertical markets, and we know you are too.
 
                 </p>
                 <div class="testimonial-container">
                     <p class="testimonial-text">Call us to know more about our package deals</p>
                     <p class="testimonial-author">General Manager</p>
+                </div>
+                <div class="col-lg-4">
+                    <form action="addReview.php" method="post">
+                        <input type="hidden" name="product" value="Product2" />
+                        <p>Review:</p>
+                        <textarea name="review" id="review" rows="4" cols="50"></textarea><br><br>
+                        Rating (1 - 5): <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                        <button type="submit" class="form-control-submit-button" name="Review">Submit</button>
+                        <br><br>
+                    </form>
+                </div>
+                <div>
+                    <label>Product Reviews</label>
+                    <?php
+getReviews("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product2");
+?>
                 </div>
             </div> <!-- end of col -->
         </div> <!-- end of row -->

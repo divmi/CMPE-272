@@ -6,6 +6,7 @@
 include '../Cookie.php';
 addLastVisited("Photography", "Products/Product4.php");
 addProductIntoDataBase("Photography", "Products/Product4.php");
+addLastVistedProductToCommonDB("Product4");
 ?>
 
 <head>

@@ -49,6 +49,33 @@ function addProductIntoDataBase($productName, $productLink)
     }
 }
 
+function addLastVistedProductToCommonDB($productName)
+{
+    $url = 'http://www.nathandiamond.com/classes/272/company/api/addVisit.php';
+//session_start();
+    $customerId = 54; //$_SESSION['customerId'];
+    $siteId = 3;
+    $data = array(
+        'customerId' => $customerId,
+        'siteId' => $siteId,
+        'productId' => $productName,
+    );
+
+    $options = array(
+        'http' => array(
+            'method' => 'POST',
+            'content' => json_encode($data),
+            'header' => "Content-Type: application/json\r\n" .
+            "Accept: application/json\r\n",
+        ),
+    );
+
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    $response = json_decode($result, true);
+    echo $response;
+}
+
 function getMostPopularProducts()
 {
     $conn = OpenCon();

@@ -1,3 +1,7 @@
+<?php
+session_start();
+require "Auth.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -341,7 +345,7 @@ background-size: cover;">
                                         <div class="card-body">
                                             <div class="testimonial-text">The guys from Aria helped with getting my
                                                 business off the ground and turning into a profitable company.</div>
-                                            <div class="testimonial-author">Jude Thorn - Founder</div>
+                                            <div class="testimonial-author">Divya Mittal - Founder</div>
                                         </div>
                                     </div>
                                 </div> <!-- end of swiper-slide -->
@@ -476,14 +480,14 @@ while ($data = mysqli_fetch_array($product)) {?>
                     <div class="grid">
                         <div class="element-item development">
                             <a class="popup-with-move-anim" href="#project-1">
-                                <div class="element-item-overlay"><span>Online Banking</span></div><img
+                                <div class="element-item-overlay"><span>Online Banking Solutions</span></div><img
                                     src="images/Banking.png" style="height:270px;backgroud-color:" white";
                                     alt="alternative">
                             </a>
                         </div>
                         <div class="element-item development">
                             <a class="popup-with-move-anim" href="#project-2">
-                                <div class="element-item-overlay"><span>Classic Industry</span></div><img
+                                <div class="element-item-overlay"><span>Classic Industry Solutions</span></div><img
                                     src="images/Industry.jpeg" style="height:270px;backgroud:" Whitelong"
                                     alt="alternative">
                             </a>

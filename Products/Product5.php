@@ -6,6 +6,7 @@
 include '../Cookie.php';
 addLastVisited("Fitness", "Products/Product5.php");
 addProductIntoDataBase("Fitness", "Products/Product5.php");
+addLastVistedProductToCommonDB("Product5");
 ?>
     <title>Registration system PHP and MySQL</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"

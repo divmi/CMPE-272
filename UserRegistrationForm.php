@@ -213,6 +213,15 @@
                         </tr>
                         <tr>
                             <td>
+                                <label for="email">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" class="form-control-input" id="password" name="password"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label for="address">Address</label>
                             </td>
                             <td>
