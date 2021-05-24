@@ -77,7 +77,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         <div class="card-image">
                             <img class="img-fluid" src="images/about.jpg" alt="alternative">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height:300px;width:350px">
                             <h3 class="card-title">Aria(By Divya Mittal)</h3>
                             <p>Aria is a top consultancy company specializing in business
                                 growth using online marketing and conversion optimization tactics</p>
@@ -93,10 +93,10 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                             <img class="img-fluid" style="height:220px;width:350px" src="images/hemakshiSite.jpeg"
                                 alt="alternative">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height:300px;width:350px">
                             <h3 class="card-title">Infloresense (by Himakshi Vijayvargiya)</h3>
-                            <p>Aria is a top consultancy company specializing in business
-                                growth using online marketing and conversion optimization tactics</p>
+                            <p>INFLORESCENCE is an online plant shopping platform that offers home-ready plants and
+                                provides premium flower delivery and plantation services.</p>
                             <a class="btn-solid-lg page-scroll" href="<?php echo $flower; ?>">Visit</a>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                             <img class="img-fluid" style="height:220px;width:350px" src="images/NateSite.jpeg"
                                 alt="alternative">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height:300px;width:350px">
                             <h3 class="card-title">Alchemy Solutions(by Nathon Diamond)</h3>
                             <p>Aria is a top consultancy company specializing in business
                                 growth using online marketing and conversion optimization tactics</p>
@@ -128,7 +128,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                             <img class="img-fluid" style="height:220px;width:350px" src="images/sarahSite.jpeg"
                                 alt="alternative">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="height:300px;width:350px">
                             <h3 class="card-title">FurEver Home(by Sarah Lau)</h3>
                             <p>Aria is a top consultancy company specializing in business
                                 growth using online marketing and conversion optimization tactics</p>

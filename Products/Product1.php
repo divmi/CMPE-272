@@ -222,78 +222,62 @@ addLastVistedProductToCommonDB("Product1");
                     <form action="addReview.php" method="post">
                         <input type="hidden" name="product" value="Product1" />
                         <p>Review:</p>
-                        <textarea name="review" id="review" rows="4" cols="50"></textarea><br><br>
-                        Rating (1 - 5): <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                        <textarea name="review" id="review" rows="4" cols="50" required></textarea><br><br>
+                        Rating (1 - 5): <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
                         <button type="submit" class="form-control-submit-button" name="submit"
                             value="click">Submit</button>
                         <br><br>
                     </form>
 
                 </div>
-                <div class="slider">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h2>Read Our Customer Testimonials</h2>
-                                <p class="p-heading">Our clients are our partners and we can not imagine a better future
-                                    for our
-                                    company without helping them reach their objectives</p>
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!-- Card Slider -->
-                                <div class="slider-container">
-                                    <div class="swiper-container card-slider">
-                                        <div class="swiper-wrapper">
-                                            <?php
-$ch = curl_init();
-//Set the URL that you want to GET by using the CURLOPT_URL option.
-curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-$data = curl_exec($ch);
-curl_close($ch);
-$json = json_decode($data, true);
-foreach ($json as $row) {
-    echo '<div class="swiper-slide">
-    <div class="card">
-        <div class="card-body">
-            <div class="testimonial-text">' . $row['ReviewComment'] . '</div>
-            <div class="testimonial-author">' . $row['Username'] . '</div>
-        </div>
-    </div>
-</div>';
-}?>
-
-                                        </div> <!-- end of swiper-wrapper -->
-
-                                        <!-- Add Arrows -->
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                        <!-- end of add arrows -->
-
-                                    </div> <!-- end of swiper-container -->
-                                </div> <!-- end of sliedr-container -->
-                                <!-- end of card slider -->
-
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-                    </div> <!-- end of container -->
-                </div> <!-- end of slider -->
                 <!-- end of testimonials -->
-                <div>
-                    <label>Product Reviews</label>
-
-                    <?php
-getReviews("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1");
-?>
-                </div>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
+        <div class="slider" style="margin-top:-95px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Read Our Customer Reviews</h4>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Card Slider -->
+                        <div class="slider-container">
+                            <div class="swiper-container card-slider">
+                                <div class="swiper-wrapper">
+
+                                    <?php
+getReviews("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1");
+?>
+                                </div> <!-- end of swiper-wrapper -->
+
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- end of add arrows -->
+
+                            </div> <!-- end of swiper-container -->
+                        </div> <!-- end of sliedr-container -->
+                        <!-- end of card slider -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of slider -->
     </div>
     </div> <!-- end of lightbox-basic -->
     <!-- end of lightbox -->
+    <script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="../js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="../js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="../js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="../js/slider.js"></script>
 </body>
 
 </html>
