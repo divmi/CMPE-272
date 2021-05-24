@@ -24,7 +24,7 @@ require "Auth.php";
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Plan The Unplanned</title>
+    <title>Aria</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
@@ -106,10 +106,13 @@ require "Auth.php";
                     <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="Users.php">Users</a>
+                    <a class="nav-link page-scroll" href="Users.php">USERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="logout.php">Logout</a>
+                    <a class="nav-link page-scroll" href="market.php">MARKETPLACE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="logout.php">LOGOUT</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -1046,7 +1049,7 @@ fclose($fp);
                             <li><i class="fas fa-phone"></i><a href="tel:003024630820">+81 720 22 128</a></li>
                             <li><i class="fas fa-envelope"></i><a href="mailto:office@aria.com">office@aria.com</a></li>
                         </ul> -->
-                        <h3>Follow Plan The Unplanned On Social Media</h3>
+                        <h3>Follow Aria On Social Media</h3>
 
                         <span class="fa-stack">
                             <a href="#your-link">

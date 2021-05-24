@@ -10,18 +10,7 @@ addLastVisited("Banking", "Products/Product1.php");
 addProductIntoDataBase("Banking", "Products/Product1.php");
 addLastVistedProductToCommonDB("Product1");
 ?>
-    <title>Registration system PHP and MySQL</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
-        rel="stylesheet">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/fontawesome-all.css" rel="stylesheet">
-    <link href="../css/swiper.css" rel="stylesheet">
-    <link href="../css/magnific-popup.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-
-    <link rel="icon" href="./images/favicon.png">
+    <title>Online Banking Solutions</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,6 +27,20 @@ addLastVistedProductToCommonDB("Product1");
     <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/fontawesome-all.css" rel="stylesheet">
+
+    <link href="../css/magnific-popup.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/swiper.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
@@ -227,8 +230,61 @@ addLastVistedProductToCommonDB("Product1");
                     </form>
 
                 </div>
+                <div class="slider">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>Read Our Customer Testimonials</h2>
+                                <p class="p-heading">Our clients are our partners and we can not imagine a better future
+                                    for our
+                                    company without helping them reach their objectives</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Card Slider -->
+                                <div class="slider-container">
+                                    <div class="swiper-container card-slider">
+                                        <div class="swiper-wrapper">
+                                            <?php
+$ch = curl_init();
+//Set the URL that you want to GET by using the CURLOPT_URL option.
+curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+$data = curl_exec($ch);
+curl_close($ch);
+$json = json_decode($data, true);
+foreach ($json as $row) {
+    echo '<div class="swiper-slide">
+    <div class="card">
+        <div class="card-body">
+            <div class="testimonial-text">' . $row['ReviewComment'] . '</div>
+            <div class="testimonial-author">' . $row['Username'] . '</div>
+        </div>
+    </div>
+</div>';
+}?>
+
+                                        </div> <!-- end of swiper-wrapper -->
+
+                                        <!-- Add Arrows -->
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <!-- end of add arrows -->
+
+                                    </div> <!-- end of swiper-container -->
+                                </div> <!-- end of sliedr-container -->
+                                <!-- end of card slider -->
+
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of container -->
+                </div> <!-- end of slider -->
+                <!-- end of testimonials -->
                 <div>
                     <label>Product Reviews</label>
+
                     <?php
 getReviews("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1");
 ?>
