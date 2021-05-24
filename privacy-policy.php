@@ -53,10 +53,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.php">Aria</a> -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="home.php">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.php"><img src="images/logo.svg" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="home.php"><img src="images/logo.svg" alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -69,22 +69,22 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.php#header">HOME <span
+                    <a class="nav-link page-scroll" href="home.php#header">HOME <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.php#intro">INTRO</a>
+                    <a class="nav-link page-scroll" href="home.php#intro">INTRO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.php#services">SERVICES</a>
+                    <a class="nav-link page-scroll" href="home.php#services">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.php#projects">PRODUCTS</a>
+                    <a class="nav-link page-scroll" href="home.php#projects">PRODUCTS</a>
                 </li>
 
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="index.php#about" id="navbarDropdown"
+                    <a class="nav-link dropdown-toggle page-scroll" href="home.php#about" id="navbarDropdown"
                         role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="terms-conditions.php"><span class="item-text">TERMS
@@ -97,7 +97,7 @@
                 <!-- end of dropdown menu -->
 
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.php#contact">CONTACT</a>
+                    <a class="nav-link page-scroll" href="home.php#contact">CONTACT</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.php">Home</a><i class="fa fa-angle-double-right"></i><span>Privacy Policy</span>
+                        <a href="home.php">Home</a><i class="fa fa-angle-double-right"></i><span>Privacy Policy</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -335,7 +335,7 @@
 
                         </div> <!-- end of col-->
                     </div> <!-- end of row -->
-                    <a class="btn-outline-reg back" href="index.php">BACK</a>
+                    <a class="btn-outline-reg back" href="home.php">BACK</a>
                 </div> <!-- end of col-->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -349,7 +349,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.php">Home</a><i class="fa fa-angle-double-right"></i><span>Privacy Policy</span>
+                        <a href="home.php">Home</a><i class="fa fa-angle-double-right"></i><span>Privacy Policy</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

@@ -3,6 +3,7 @@
 
 <head>
     <?php
+require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
 addLastVisited("Industry", "Products/Product2.php");
@@ -46,10 +47,10 @@ addLastVistedProductToCommonDB("Product2");
 <body>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top top-nav-collapse">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.php">Aria</a> -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="home.php">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="../index.php"><img src="../images/logo.svg" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="../home.php"><img src="../images/logo.svg" alt="alternative"></a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -62,41 +63,29 @@ addLastVistedProductToCommonDB("Product2");
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../index.php#header">HOME <span
+                    <a class="nav-link page-scroll" href="../home.php#header">HOME <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../index.php#intro">INTRO</a>
+                    <a class="nav-link page-scroll" href="../home.php#intro">INTRO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll " href="../index.php#services">SERVICES</a>
+                    <a class="nav-link page-scroll " href="../home.php#services">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../index.php#projects">PRODUCTS</a>
-                </li>
-
-                <!-- Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../terms-conditions.php"><span class="item-text">TERMS
-                                CONDITIONS</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="../privacy-policy.php"><span class="item-text">PRIVACY
-                                POLICY</span></a>
-                    </div>
-                </li>
-                <!-- end of dropdown menu -->
-
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../index.php#contact">CONTACT</a>
+                    <a class="nav-link page-scroll active" href="../home.php#projects">PRODUCTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../SecureRecords.php">Secure Clients Records</a>
+                    <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll active" href="../Users.php">Users</a>
+                    <a class="nav-link page-scroll" href="../Users.php">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="../logout.php">Logout</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -116,10 +105,10 @@ addLastVistedProductToCommonDB("Product2");
         </div>
     </nav>
     <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <!-- <a class="navbar-brand logo-text page-scroll" href="index.php">Aria</a> -->
+    <!-- <a class="navbar-brand logo-text page-scroll" href="home.php">Aria</a> -->
 
     <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="../index.php"><img src="../images/logo.svg" alt="alternative"></a>
+    <a class="navbar-brand logo-image" href="../home.php"><img src="../images/logo.svg" alt="alternative"></a>
 
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -132,22 +121,22 @@ addLastVistedProductToCommonDB("Product2");
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.php#header">HOME <span
+                <a class="nav-link page-scroll" href="../home.php#header">HOME <span
                         class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.php#intro">INTRO</a>
+                <a class="nav-link page-scroll" href="../home.php#intro">INTRO</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.php#services">SERVICES</a>
+                <a class="nav-link page-scroll" href="../home.php#services">SERVICES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.php#projects">PRODUCTS</a>
+                <a class="nav-link page-scroll" href="../home.php#projects">PRODUCTS</a>
             </li>
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="../index.php#about" id="navbarDropdown"
+                <a class="nav-link dropdown-toggle page-scroll" href="../home.php#about" id="navbarDropdown"
                     role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../terms-conditions.php"><span class="item-text">TERMS
@@ -160,7 +149,7 @@ addLastVistedProductToCommonDB("Product2");
             <!-- end of dropdown menu -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.php#contact">CONTACT</a>
+                <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="../SecureRecords.php">Secure Clients Records</a>
