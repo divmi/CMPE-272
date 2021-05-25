@@ -70,7 +70,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
             </li>
     </nav>
 
-    <div id="intro" class="basic-1">
+    <div id="intro" class="basic-1" style="margin-left:90px">
         <div class="container" style="margin-left:7px">
             <table>
                 <tbody>
@@ -89,9 +89,9 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
             </table>
         </div>
         <div class="col-xs-12" style="margin-left:23px">
-            <table style="width: 1200px;" class="table table-bordered table-hover">
+            <table style="width: 1200px;" class="table table-hover">
                 <thead>
-                    <tr class="success">
+                    <tr>
                         <th>Product Name</th>
                         <th>Market</th>
                         <th>Average Rating</th>

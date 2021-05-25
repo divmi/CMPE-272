@@ -138,7 +138,7 @@ function getMostPopularProductsAcrossMarketPlace($url)
             echo '<tr>';
             echo '<td><a href=' . $row["ProductLink"] . '>' . $row["ProductName"] . '</a></td>';
             echo '<td>' . $row["SiteName"] . '</td>';
-            echo '<td>' . $value . '</td>';
+            echo '<td>' . $value . '<i class="fa fa-star" style="color:orange;"></i></td>';
             echo '<td>' . $row["NumRatings"] . '</td>';
             echo '<td>' . $row["NumVisits"] . '</td>';
             echo '</tr>';

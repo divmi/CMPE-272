@@ -101,7 +101,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                                 alt="alternative">
                         </div>
                         <div class="card-body" style="height:320px;width:335px">
-                            <h3 class="card-title">Infloresense (by Himakshi)</h3>
+                            <h3 class="card-title">INFLORESCENCE (by Himakshi)</h3>
                             <p>INFLORESCENCE is an online plant shopping platform that offers home-ready plants and
                                 provides premium flower delivery and plantation services.</p>
                             <a class="btn-solid-lg page-scroll" href="<?php echo $flower; ?>">Visit</a>
