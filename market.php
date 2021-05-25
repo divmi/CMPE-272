@@ -58,7 +58,14 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
         </div>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="./logout.php">Logout <span class="sr-only">(current)</span></a>
+                <a class="nav-link page-scroll active" href="market.php">MARKET <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="topProducts.php?popular=r">TOP PRODUCTS <span
+                        class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="./logout.php">LOGOUT <span class="sr-only">(current)</span></a>
             </li>
     </nav>
     <div id="services" class="cards-2">
@@ -77,7 +84,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         <div class="card-image">
                             <img class="img-fluid" src="images/about.jpg" alt="alternative">
                         </div>
-                        <div class="card-body" style="height:300px;width:335px">
+                        <div class="card-body" style="height:320px;width:335px">
                             <h3 class="card-title">Aria(By Divya Mittal)</h3>
                             <p>Aria is a top consultancy company specializing in business
                                 growth using online marketing and conversion optimization tactics</p>
@@ -93,8 +100,8 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                             <img class="img-fluid" style="height:220px;width:350px" src="images/hemakshiSite.jpeg"
                                 alt="alternative">
                         </div>
-                        <div class="card-body" style="height:300px;width:335px">
-                            <h3 class="card-title">Infloresense (by Himakshi Vijayvargiya)</h3>
+                        <div class="card-body" style="height:320px;width:335px">
+                            <h3 class="card-title">Infloresense (by Himakshi)</h3>
                             <p>INFLORESCENCE is an online plant shopping platform that offers home-ready plants and
                                 provides premium flower delivery and plantation services.</p>
                             <a class="btn-solid-lg page-scroll" href="<?php echo $flower; ?>">Visit</a>
@@ -114,8 +121,8 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         </div>
                         <div class="card-body" style="height:300px;width:335px">
                             <h3 class="card-title">Alchemy Solutions(by Nathon Diamond)</h3>
-                            <p>Aria is a top consultancy company specializing in business
-                                growth using online marketing and conversion optimization tactics</p>
+                            <p>The one-stop, mom-and-pop shop to take your alchemy and potion game straight to the top!
+                            </p>
                             <a class="btn-solid-lg page-scroll" href="<?php echo $alchemist; ?>">Visit</a>
                         </div>
                     </div>
@@ -130,8 +137,8 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         </div>
                         <div class="card-body" style="height:300px;width:335px">
                             <h3 class="card-title">FurEver Home(by Sarah Lau)</h3>
-                            <p>Aria is a top consultancy company specializing in business
-                                growth using online marketing and conversion optimization tactics</p>
+                            <p>Furever Home is an adoption center dedicated to connecting fur animals of every shape and
+                                size to their furever homes.</p>
                             <a class="btn-solid-lg page-scroll" href="<?php echo $petAdopt; ?>">Visit</a>
                         </div>
                     </div>

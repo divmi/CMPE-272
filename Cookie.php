@@ -59,8 +59,8 @@ function addProductIntoDataBase($productName, $productLink)
 function addLastVistedProductToCommonDB($productName)
 {
     $url = 'http://www.nathandiamond.com/classes/272/company/api/addVisit.php';
-//session_start();
-    $customerId = 54; //$_SESSION['customerId'];
+    session_start();
+    $customerId = $_SESSION['customerId']; //$_SESSION['customerId'];
     $siteId = 3;
     $data = array(
         'customerId' => $customerId,
@@ -80,7 +80,6 @@ function addLastVistedProductToCommonDB($productName)
     $context = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
     $response = json_decode($result, true);
-    echo $response;
 }
 
 function getMostPopularProductsPerRating()
@@ -121,4 +120,28 @@ function getMostPopularProducts()
     // $result = mysqli_query($conn, $sql);
     // CloseCon($conn);
     // return $result;
+}
+
+function getMostPopularProductsAcrossMarketPlace($url)
+{
+    $ch = curl_init();
+    //Set the URL that you want to GET by using the CURLOPT_URL option.
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $json = json_decode($data, true);
+    if (count($json) > 0) {
+        foreach ($json as $row) {
+            $value = substr($row["AvgRating"], 0, -3);
+            echo '<tr>';
+            echo '<td><a href=' . $row["ProductLink"] . '>' . $row["ProductName"] . '</a></td>';
+            echo '<td>' . $row["SiteName"] . '</td>';
+            echo '<td>' . $value . '</td>';
+            echo '<td>' . $row["NumRatings"] . '</td>';
+            echo '<td>' . $row["NumVisits"] . '</td>';
+            echo '</tr>';
+        }
+    }
 }
