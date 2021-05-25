@@ -2,7 +2,7 @@
 require 'Auth.php';
 session_start();
 
-$petAdopt = "http://sarahlau-se.com/?page_id=156?customerId=" . $_SESSION['customerId'];
+$petAdopt = "https://sarahlau-se.com?customerId=" . $_SESSION['customerId'];
 $alchemist = "http://www.nathandiamond.com/classes/272/company/home.php?customerId=" . $_SESSION['customerId'];
 $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com?customerId=" . $_SESSION['customerId'];
 ?>
