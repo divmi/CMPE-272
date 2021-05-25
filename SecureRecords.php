@@ -89,7 +89,7 @@
                     <a class="nav-link page-scroll active" href="SecureRecords.php">Secure Clients Records</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="Users.php">Users</a>
+                    <a class="nav-link page-scroll" href="showUserFromALLSites.php">Users</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -159,7 +159,7 @@
                 <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="Users.php">Users</a>
+                <a class="nav-link page-scroll" href="showUserFromALLSites.php">Users</a>
             </li>
         </ul>
         <span class="nav-item social-icons">

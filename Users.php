@@ -68,7 +68,7 @@
                     <a class="nav-link page-scroll" href="home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll active" href="Users.php">Users</a>
+                    <a class="nav-link page-scroll active" href="showUserFromALLSites.php">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="market.php">MarketPlace</a>
@@ -126,7 +126,7 @@
                 <a class="nav-link page-scroll" href="home.php#contact">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="Users.php">Users</a>
+                <a class="nav-link page-scroll" href="showUserFromALLSites.php">Users</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="logout.php">Logout</a>
@@ -154,9 +154,6 @@
             <table>
                 <tbody>
                     <tr>
-                        <td> <button type="submit" class="form-control-submit-button"
-                                onclick="document.location='UserRegistrationForm.php'">Join Company</button>
-                        </td>
                         <td> <button type="submit" class="form-control-submit-button"
                                 onclick="document.location='UserSearchForm.php'">Search a User</button>
                         </td>

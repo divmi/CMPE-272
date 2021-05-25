@@ -96,7 +96,7 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         <th>Market</th>
                         <th>Average Rating</th>
                         <th>Total Rating</th>
-                        <th>Total Page Vist</th>
+                        <th>Total Page Visit</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -106,7 +106,7 @@ require "Auth.php";
                     <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="Users.php">USERS</a>
+                    <a class="nav-link page-scroll" href="showUserFromALLSites.php">USERS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="market.php">MARKETPLACE</a>
@@ -557,7 +557,7 @@ foreach ($json as $row) {?>
                         </div>
                         <div class="element-item design marketing">
                             <a class="popup-with-move-anim" href="#project-10">
-                                <div class="element-item-overlay"><span>Cafe Solution</span></div><img
+                                <div class="element-item-overlay"><span>Restaurant Bussiness Solution</span></div><img
                                     style="height:270px;" src="images/Restaurent.jpeg" alt="alternative">
                             </a>
                         </div>

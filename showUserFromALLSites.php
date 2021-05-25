@@ -68,7 +68,7 @@
                     <a class="nav-link page-scroll" href="home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll active" href="Users.php">Users</a>
+                    <a class="nav-link page-scroll active" href="showUserFromALLSites.php">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="market.php">MarketPlace</a>
@@ -143,7 +143,7 @@
                 <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="Users.php">Users</a>
+                <a class="nav-link page-scroll" href="showUserFromALLSites.php">Users</a>
             </li>
         </ul>
         <span class="nav-item social-icons">
@@ -166,6 +166,9 @@
     <div id="intro" class="basic-1">
         <div class="container">
             <div class="row">
+                <div class=col-sm-2 style="margin-left:-10px;padding:10px"> <button type="submit"
+                        class="form-control-submit-button" onclick="document.location='UserSearchForm.php'">Search a
+                        User</button></div>
                 <div class="col-xs-12">
                     <table style="width: 1200px;" class="table table-bordered table-hover">
                         <thead>
@@ -199,9 +202,9 @@ while ($data = mysqli_fetch_array($result)) {
     echo '<td>' . "Local" . '</td>';
     echo '</tr>';
 }
-FindCurlUser("http://www.nathandiamond.com/classes/272/company/api/users.php", "Nate's Site");
+FindCurlUser("http://www.nathandiamond.com/classes/272/company/api/showUserFromALLSites.php", "Nate's Site");
 FindCurlUser("http://sarahlau-se.com/?page_id=145", "Sarah's Site");
-FindCurlUser("http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com/myusers.php", "Hemakshi's site");
+FindCurlUser("http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com/myshowUserFromALLSites.php", "Hemakshi's site");
 ?>
                             <table>
                                 <tbody>

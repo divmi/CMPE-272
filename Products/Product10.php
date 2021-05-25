@@ -76,7 +76,7 @@ addLastVistedProductToCommonDB("Product10");
                     <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../Users.php">Users</a>
+                    <a class="nav-link page-scroll" href="../showUserFromALLSites.php">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>
@@ -135,7 +135,7 @@ addLastVistedProductToCommonDB("Product10");
                 <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../Users.php">Users</a>
+                <a class="nav-link page-scroll" href="../showUserFromALLSites.php">Users</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>
@@ -169,7 +169,7 @@ addLastVistedProductToCommonDB("Product10");
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="row">
-                    <h3 style="margin-right: 370px;
+                    <h3 style="margin-right: 200px;
     margin-left: 10px;">Restaurant Bussiness Solution</h3>
                     <?php
 getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product10")
