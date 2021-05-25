@@ -14,6 +14,7 @@ $first_name = validate($_POST['firstName']);
 $password = validate($_POST['password']);
 $last_name = validate($_POST['lastName']);
 $email = validate($_POST['email']);
+$userName = validate($_POST['userName']);
 $address = validate($_POST['address']);
 $homePhone = validate($_POST['homePhone']);
 $cellPhone = validate($_POST['cellPhone']);

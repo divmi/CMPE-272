@@ -76,7 +76,7 @@ addLastVistedProductToCommonDB("Product10");
                     <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../showUserFromALLSites.php">Users</a>
+                    <a class="nav-link page-scroll" href="../Users.php">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>
@@ -135,7 +135,7 @@ addLastVistedProductToCommonDB("Product10");
                 <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../showUserFromALLSites.php">Users</a>
+                <a class="nav-link page-scroll" href="../Users.php">Users</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>

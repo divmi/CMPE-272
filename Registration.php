@@ -71,17 +71,16 @@
 
     <div id="intro" class="basic-1">
         <form id="userForm" method="post" action="MarketRegistration.php" data-toggle="validator" data-focus="false">
-            <?php if (isset($_GET['error'])) {?>
-            <p class="error"><?php echo $_GET['error']; ?></p>
-            <?php }?>
-
-            <?php if (isset($_GET['success'])) {?>
-            <p class="success"><?php echo $_GET['success']; ?></p>
-            <?php }?>
-
             <div class="container" style="margin-left:400px">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-5">
+                        <?php if (isset($_GET['error'])) {?>
+                        <p class="error"><?php echo $_GET['error']; ?></p>
+                        <?php }?>
+
+                        <?php if (isset($_GET['success'])) {?>
+                        <p class="success"><?php echo $_GET['success']; ?></p>
+                        <?php }?>
                         <table style="width:500px">
                             <tbody>
                                 <tr>
@@ -161,7 +160,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"> <a class="" href="index.php">Already Registered?Login</a>
+                                    <td colspan="2"> <a class="" href="index.php">Already have an account?Login</a>
                                     </td>
                                 </tr>
                             </tbody>

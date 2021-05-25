@@ -68,7 +68,7 @@
                     <a class="nav-link page-scroll" href="home.php#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll active" href="showUserFromALLSites.php">Users</a>
+                    <a class="nav-link page-scroll active" href="Users.php">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="market.php">MarketPlace</a>
@@ -143,7 +143,7 @@
                 <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="showUserFromALLSites.php">Users</a>
+                <a class="nav-link page-scroll" href="Users.php">Users</a>
             </li>
         </ul>
         <span class="nav-item social-icons">
@@ -166,9 +166,6 @@
     <div id="intro" class="basic-1">
         <div class="container">
             <div class="row">
-                <div class=col-sm-2 style="margin-left:-10px;padding:10px"> <button type="submit"
-                        class="form-control-submit-button" onclick="document.location='UserSearchForm.php'">Search a
-                        User</button></div>
                 <div class="col-xs-12">
                     <table style="width: 1200px;" class="table table-bordered table-hover">
                         <thead>

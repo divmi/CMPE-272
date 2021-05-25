@@ -106,7 +106,7 @@ require "Auth.php";
                     <a class="nav-link page-scroll" href="SecureRecords.php">Secure Clients Records</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="showUserFromALLSites.php">USERS</a>
+                    <a class="nav-link page-scroll" href="Users.php">USERS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="market.php">MARKETPLACE</a>
