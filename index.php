@@ -85,7 +85,7 @@
                     <strong>Password: </strong> <input class="form-control" type="password" name="PASSWORD" required />
                     <input style="margin-top:20px" class="btn btn-primary" type="submit" name="submit" value="Login" />
                     <br />
-                    <a class="" href="Registartion.php">No account? Signup</a>
+                    <a class="" href="Registration.php">No account? Signup</a>
 
                 </form>
             </div>

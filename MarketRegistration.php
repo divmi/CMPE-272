@@ -20,12 +20,12 @@ $cellPhone = validate($_POST['cellPhone']);
 $sql = "SELECT * FROM UserRegisterationTable WHERE Email='$email' ";
 $pattern = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{10,20}$/';
 if (!preg_match($pattern, $password)) {
-    header("Location: Registartion.php?error= Incorrect password format");
+    header("Location: Registration.php?error= Incorrect password format");
 } else {
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-        header("Location: Registartion.php?error=The Email is taken try another&$email");
+        header("Location: Registration.php?error=The Email is taken try another&$email");
         exit();
     } else {
         $sql2 = "INSERT INTO UserRegisterationTable (FirstName, LastName, Email, Address,HomePhone,CellPhone) VALUES ('$first_name',
@@ -36,7 +36,7 @@ if (!preg_match($pattern, $password)) {
 
 //The data you want to send via POST
             $data = array(
-                'username' => $email,
+                'username' => $userName,
                 'password' => $password,
             );
 
@@ -52,10 +52,10 @@ if (!preg_match($pattern, $password)) {
             $context = stream_context_create($options);
             $result = file_get_contents($url, false, $context);
             $response = json_decode($result);
-            header("Location: Registartion.php?success=Your account has been created successfully");
+            header("Location: Registration.php?success=Your account has been created successfully");
             exit();
         } else {
-            header("Location: Registartion.php?error=unknown error occurred&$email");
+            header("Location: Registration.php?error=unknown error occurred&$email");
             exit();
         }
     }
