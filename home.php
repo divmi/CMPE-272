@@ -899,8 +899,8 @@ while ($data = mysqli_fetch_array($product)) {?>
                         <div class="image-wrapper">
                             <img class="img-fluid" src="images/team-2.png" alt="alternative">
                         </div> <!-- end of image wrapper -->
-                        <p class="p-large">Veronique Smith</p>
-                        <p class="job-title">Business Developer</p>
+                        <p class="p-large">Divya Mittal</p>
+                        <p class="job-title">CEO</p>
                         <span class="social-icons">
                             <span class="fa-stack">
                                 <a href="#your-link">

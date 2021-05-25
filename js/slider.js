@@ -10,7 +10,6 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
-    slidesPerView: 4,
     spaceBetween: 20,
     breakpoints: {
       // when window is <= 992px

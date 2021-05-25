@@ -1,9 +1,8 @@
 <?php
-echo 'came here';
 extract($_POST);
 $url = 'http://www.nathandiamond.com/classes/272/company/api/addReview.php';
-//session_start();
-$customerId = 54; //$_SESSION['customerId'];
+session_start();
+$customerId = $_SESSION['customerId'];
 $siteId = 3;
 $data = array(
     'customerId' => $customerId,
@@ -25,4 +24,4 @@ $options = array(
 $context = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 $response = json_decode($result, true);
-echo $result;
+header('Location: ' . $_SERVER['HTTP_REFERER']);

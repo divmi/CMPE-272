@@ -183,34 +183,53 @@ addLastVistedProductToCommonDB("Product1");
             </div> <!-- end of col -->
             <div class="col-lg-6" style="
                     margin-top: -60px;">
-                <h3>Online Banking</h3>
+                <div class="row">
+                    <h3 style="margin-right: 370px;
+    margin-left: 10px;">Online Banking</h3>
+                    <?php
+getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product1")
+?>
+                </div>
+
                 <hr class="line-heading">
                 <h6>What is business online banking</h6>
-                <p>Online business banking offers many of the same services as traditional business banking, such as a
-                    business checking account, but the banks' operations are entirely online. You apply for an account
-                    on the banks' website and, once your account is approved, access it via a web browser or mobile app.
+                <p>Online business banking offers many of the same services as traditional business banking, such as
+                    a
+                    business checking account, but the banks' operations are entirely online. You apply for an
+                    account
+                    on the banks' website and, once your account is approved, access it via a web browser or mobile
+                    app.
                 </p>
                 <h6>What features does online banking provide?</h6>
-                <p>The concept of online banking is nothing new. For years now, most traditional banks have offered an
-                    online component for users to easily access their account balances, transfer funds between accounts,
+                <p>The concept of online banking is nothing new. For years now, most traditional banks have offered
+                    an
+                    online component for users to easily access their account balances, transfer funds between
+                    accounts,
                     accept direct deposit and pay bills online. But these features usually came with the expectation
-                    that you would step into a physical branch at some point. Regardless of the online functionality,
+                    that you would step into a physical branch at some point. Regardless of the online
+                    functionality,
                     the physical bank locations were still the top of a user's interaction with the bank, and bank
                     officials usually saw those interactions as a time to upsell customers on items like additional
                     lines of credit.
 
                     Digital-only banking doesn't come with that expectation. Since there are no physical branches,
                     transactions can be conducted at the speed of the internet. Without the overhead of owning and
-                    operating a physical branch, online-only banking customers often don't have to deal with additional
+                    operating a physical branch, online-only banking customers often don't have to deal with
+                    additional
                     fees. In fact, many online-only banks have eliminated banking fees, including overdraft fees,
-                    monthly maintenance fees and transaction fees in some cases. Online business checking accounts are
+                    monthly maintenance fees and transaction fees in some cases. Online business checking accounts
+                    are
                     regularly provided with a business debit card without any hint of a monthly fee.
 
-                    "There's a different value proposition when you're talking about the differences between someone who
-                    wants to interact face to face with a banker and needs explanations ... but I think that today the
-                    nature of small business is changing so much, and entrepreneurs are younger and more tech savvy,"
+                    "There's a different value proposition when you're talking about the differences between someone
+                    who
+                    wants to interact face to face with a banker and needs explanations ... but I think that today
+                    the
+                    nature of small business is changing so much, and entrepreneurs are younger and more tech
+                    savvy,"
                     said Bryan Crumpler, chief operating officer at online banking platform Azlo. "The education and
-                    rise of other digital platforms have made it a lot easier to describe to folks what banking really
+                    rise of other digital platforms have made it a lot easier to describe to folks what banking
+                    really
                     is, and because we are 100% free, there's really nothing to hide or have to explain."
 
                 </p>

@@ -5,11 +5,12 @@
     <?php
 require '../Auth.php';
 include '../Cookie.php';
+include '../review.php';
 addLastVisited("Restaurent", "Products/Product10.php");
 addProductIntoDataBase("Restaurent", "Products/Product10.php");
 addLastVistedProductToCommonDB("Product10");
 ?>
-    <title>Registration system PHP and MySQL</title>
+    <title>Restaurent</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
@@ -130,28 +131,17 @@ addLastVistedProductToCommonDB("Product10");
                 <a class="nav-link page-scroll" href="../home.php#projects">PRODUCTS</a>
             </li>
 
-            <!-- Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="../home.php#about" id="navbarDropdown"
-                    role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../terms-conditions.php"><span class="item-text">TERMS
-                            CONDITIONS</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="../privacy-policy.php"><span class="item-text">PRIVACY
-                            POLICY</span></a>
-                </div>
-            </li>
-            <!-- end of dropdown menu -->
-
             <li class="nav-item">
                 <a class="nav-link page-scroll" href="../home.php#contact">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../SecureRecords.php">Secure Clients Records</a>
+                <a class="nav-link page-scroll" href="../Users.php">Users</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="../Users.php">Users</a>
+                <a class="nav-link page-scroll" href="../market.php">MarketPlace</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="../logout.php">Logout</a>
             </li>
         </ul>
         <span class="nav-item social-icons">
@@ -178,7 +168,13 @@ addLastVistedProductToCommonDB("Product10");
                     margin-top: 80px;" src="../images/Restaurent.jpeg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-6">
-                <h3>Restaurent Bussiness Solution</h3>
+                <div class="row">
+                    <h3 style="margin-right: 370px;
+    margin-left: 10px;">Restaurent Bussiness Solution</h3>
+                    <?php
+getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product10")
+?>
+                </div>
                 <hr class="line-heading">
                 <h6>What is Restaurent Solution provider</h6>
                 <p>For many businesses, expansion is part of the plan from day one. For restaurant owners, however,
@@ -219,10 +215,66 @@ addLastVistedProductToCommonDB("Product10");
                     <p class="testimonial-text">Call us to know more about our package deals</p>
                     <p class="testimonial-author">General Manager</p>
                 </div>
+                <div class="col-lg-4">
+                    <form action="addReview.php" method="post">
+                        <input type="hidden" name="product" value="Product10" />
+                        <p>Review:</p>
+                        <textarea name="review" id="review" rows="4" cols="50"></textarea><br><br>
+                        Rating (1 - 5): <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                        <button type="submit" class="form-control-submit-button" name="Review">Submit</button>
+                        <br><br>
+                    </form>
+                </div>
+                <!-- end of testimonials -->
             </div> <!-- end of col -->
         </div> <!-- end of row -->
+        <div class="slider" style="margin-top:-95px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Read Our Customer Reviews</h4>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Card Slider -->
+                        <div class="slider-container">
+                            <div class="swiper-container card-slider">
+                                <div class="swiper-wrapper">
+
+                                    <?php
+getReviews("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product10");
+?>
+                                </div> <!-- end of swiper-wrapper -->
+
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- end of add arrows -->
+
+                            </div> <!-- end of swiper-container -->
+                        </div> <!-- end of sliedr-container -->
+                        <!-- end of card slider -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of slider -->
+    </div>
     </div> <!-- end of lightbox-basic -->
     <!-- end of lightbox -->
+    <script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="../js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="../js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="../js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="../js/slider.js"></script>
+</body>
+<!-- end of lightbox -->
 </body>
 
 </html>
