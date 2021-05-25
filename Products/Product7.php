@@ -174,7 +174,7 @@ addLastVistedProductToCommonDB("Product7");
     <div id="project-1" class="form-2">
         <div class="row">
             <div class="col-lg-5">
-                <img style="width: 600px;
+                <img style="width: 550px;
                     padding: 10px;" src="../images/project-7.jpg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-6">

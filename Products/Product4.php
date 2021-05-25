@@ -183,8 +183,8 @@ addLastVistedProductToCommonDB("Product4");
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="row">
-                    <h3 style="margin-right: 370px;
-    margin-left: 10px;">Photogrphy</h3>
+                    <h3 style="margin-right: 200px;
+    margin-left: 10px;">Photography Company Solution</h3>
                     <?php
 getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product4")
 ?>

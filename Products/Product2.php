@@ -178,14 +178,14 @@ addLastVistedProductToCommonDB("Product2");
         <div class="row">
             <div class="col-lg-5" style="
                     margin-top: -60px;">
-                <img style="width: 600px;
+                <img style="width: 550px;
                     padding: 10px;
                     margin-top: 80px;" src="../images/Industry.jpeg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-6">
                 <div class="row">
-                    <h3 style="margin-right: 370px;
-    margin-left: 10px;">Classic Industry</h3>
+                    <h3 style="margin-right: 250px;
+    margin-left: 10px;">Classic Industry Solutions</h3>
                     <?php
 getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product2")
 ?>

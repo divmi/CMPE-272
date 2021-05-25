@@ -513,21 +513,21 @@ foreach ($json as $row) {?>
                         </div>
                         <div class="element-item design development marketing">
                             <a class="popup-with-move-anim" href="#project-3">
-                                <div class="element-item-overlay"><span>Music Company</span></div><img
+                                <div class="element-item-overlay"><span>Music Company Solution</span></div><img
                                     style="height:270px;backgroud:" Whitelong" src="images/Music.jpeg"
                                     alt="alternative">
                             </a>
                         </div>
                         <div class="element-item design development marketing">
                             <a class="popup-with-move-anim" href="#project-4">
-                                <div class="element-item-overlay"><span>Photography</span></div><img
+                                <div class="element-item-overlay"><span>Photography Company Solution</span></div><img
                                     src="images/project-4.jpg" alt="alternative">
                             </a>
                         </div>
                         <div class="element-item design development marketing seo">
                             <a class="popup-with-move-anim" href="#project-5">
-                                <div class="element-item-overlay"><span>Fitness</span></div><img
-                                    style="height:270px;backgroud:" Whitelong" src="images/Fitness.jpg"
+                                <div class="element-item-overlay"><span>Fitness center Bussiness Solution</span></div>
+                                <img style="height:270px;backgroud:" Whitelong" src="images/Fitness.jpg"
                                     alt="alternative">
                             </a>
                         </div>
@@ -551,7 +551,7 @@ foreach ($json as $row) {?>
                         </div>
                         <div class="element-item design marketing">
                             <a class="popup-with-move-anim" href="#project-9">
-                                <div class="element-item-overlay"><span>IT Solutions</span></div><img
+                                <div class="element-item-overlay"><span>IT Company Solutions</span></div><img
                                     style="height:270px;" src="images/ITSolutions.jpeg" alt="alternative">
                             </a>
                         </div>
@@ -577,7 +577,7 @@ foreach ($json as $row) {?>
                 <img class="img-fluid" src="images/Banking.png" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Online Banking</h3>
+                <h3>Online Banking Solutions</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet
@@ -608,7 +608,7 @@ foreach ($json as $row) {?>
                 <img class="img-fluid" src="images/Industry.jpeg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Classic Industry</h3>
+                <h3>Classic Industry Solutions</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet
@@ -668,7 +668,7 @@ foreach ($json as $row) {?>
                 <img class="img-fluid" src="images/project-4.jpg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>PhotoGraphy</h3>
+                <h3>PhotoGraphy Company Solutions</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet
@@ -813,7 +813,7 @@ foreach ($json as $row) {?>
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="images/ITSolutions.jpeg" alt="alternative">
+                <img class="img-fluid" src="images/ITSolutions.jpeg" width="600px" height="200px" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
                 <h3>IT Solutions Plan</h3>
