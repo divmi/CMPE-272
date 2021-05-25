@@ -242,7 +242,7 @@ getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReview
                         <input type="hidden" name="product" value="Product5" />
                         <p>Review:</p>
                         <textarea name="review" id="review" rows="4" cols="50"></textarea><br><br>
-                        Rating (1 - 5): <input type="number" id="rating" name="rating" min="1" max="5"><br><br>
+                        Rating (1 - 10): <input type="number" id="rating" name="rating" min="1" max="10"><br><br>
                         <button type="submit" class="form-control-submit-button" name="Review">Submit</button>
                         <br><br>
                     </form>
