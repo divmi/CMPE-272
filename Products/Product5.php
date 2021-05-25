@@ -6,7 +6,7 @@
 require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
-addLastVisited("Fitness", "Products/Product5.php");
+addLastVisited("Fitness Centers", "Products/Product5.php");
 addProductIntoDataBase("Fitness", "Products/Product5.php");
 addLastVistedProductToCommonDB("Product5");
 

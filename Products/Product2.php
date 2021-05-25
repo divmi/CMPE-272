@@ -7,7 +7,7 @@ require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
 addLastVisited("Industry", "Products/Product2.php");
-addProductIntoDataBase("Industry", "Products/Product2.php");
+addProductIntoDataBase("Classic Industry", "Products/Product2.php");
 addLastVistedProductToCommonDB("Product2");
 ?>
     <title>Classic Industry</title>

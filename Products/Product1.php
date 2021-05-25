@@ -7,7 +7,7 @@ require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
 addLastVisited("Banking", "Products/Product1.php");
-addProductIntoDataBase("Banking", "Products/Product1.php");
+addProductIntoDataBase("Online Banking", "Products/Product1.php");
 addLastVistedProductToCommonDB("Product1");
 ?>
     <title>Online Banking Solutions</title>

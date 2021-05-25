@@ -448,33 +448,46 @@ background-size: cover;">
                     <div class="section-title">Products</div>
                     <h2>Products That We're Proud Of</h2>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                             <h4>
-                                Previously Visited Pages <br /> </h4>
+                                Previously Visited Products <br /> </h4>
                             <p>
                                 <?php
 include 'Cookie.php';
-$cookie = getLastVisitedAll();
-foreach ($cookie as $key => $value) {?>
-                                <a href="<?php echo $value ?>">Product Link </a></br>
+$json = getLastVisitedAll();
+foreach ($json as $row) {?>
+                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
                                 <?php
 }
 ?>
 
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                             <h4>
-                                Most Popular Products <br /> </h4>
+                                Most Popular Products Based on Visit <br /> </h4>
                             <p>
                                 <?php
-$product = getMostPopularProducts();
-while ($data = mysqli_fetch_array($product)) {?>
-                                <a
-                                    href="<?php echo $data["ProductLink"] ?>"><?php echo $data["ProductName"]; ?></a></br>
+$json = getMostPopularProducts();
+foreach ($json as $row) {?>
+                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
                                 <?php
 }
 ?>
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h4>
+                                Most Popular Products Based on Rating <br /> </h4>
+                            <p>
+                                <?php
+$json = getMostPopularProductsPerRating();
+foreach ($json as $row) {?>
+                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
+                                <?php
+}
+?>
+                            </p>
                         </div>
                     </div>
 
@@ -831,7 +844,7 @@ while ($data = mysqli_fetch_array($product)) {?>
                 <img class="img-fluid" src="images/Restaurent.jpeg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Restaurent Bussiness Solution</h3>
+                <h3>Restaurant Bussiness Solution</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
                 <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet

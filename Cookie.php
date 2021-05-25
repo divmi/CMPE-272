@@ -5,29 +5,36 @@ define("PRODUCT_KEY", "productsVisited");
 
 function addLastVisited($productName, $productLink)
 {
-    $productArray = array($productLink);
-    foreach (getLastVisitedAll() as $index => $value) {
-        if ($value !== $productLink) {
-            array_push($productArray, $value);
+    // $productArray = array($productLink);
+    // foreach (getLastVisitedAll() as $index => $value) {
+    //     if ($value !== $productLink) {
+    //         array_push($productArray, $value);
 
-            if (count($productArray) >= RECENT_PRODUCT_COUNT) {
-                break;
-            }
+    //         if (count($productArray) >= RECENT_PRODUCT_COUNT) {
+    //             break;
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
-    setcookie(PRODUCT_KEY, serialize($productArray), time() + 360000, '/');
+    // setcookie(PRODUCT_KEY, serialize($productArray), time() + 360000, '/');
 }
 
 function getLastVisitedAll()
 {
-    if (isset($_COOKIE[PRODUCT_KEY])) {
-        return unserialize($_COOKIE[PRODUCT_KEY]);
-    } else {
-        return array();
+    $ch = curl_init();
+    session_start();
+    $customerID = $_SESSION['customerId'];
+    //Set the URL that you want to GET by using the CURLOPT_URL option.
+    curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/getVisits.php/?siteId=3&limit=5&customerId=$customerID");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $json = json_decode($data, true);
+    if (count($json) > 0) {
+        return $json;
     }
-
 }
 
 function addProductIntoDataBase($productName, $productLink)
@@ -76,11 +83,42 @@ function addLastVistedProductToCommonDB($productName)
     echo $response;
 }
 
+function getMostPopularProductsPerRating()
+{
+    $ch = curl_init();
+    //Set the URL that you want to GET by using the CURLOPT_URL option.
+    curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/getItems.php/?siteId=3&limit=5");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $json = json_decode($data, true);
+    if (count($json) > 0) {
+        return $json;
+    }
+    // $conn = OpenCon();
+    // $sql = "SELECT * FROM PopularProducts ORDER BY Count DESC LIMIT 5";
+    // $result = mysqli_query($conn, $sql);
+    // CloseCon($conn);
+    // return $result;
+}
+
 function getMostPopularProducts()
 {
-    $conn = OpenCon();
-    $sql = "SELECT * FROM PopularProducts ORDER BY Count DESC LIMIT 5";
-    $result = mysqli_query($conn, $sql);
-    CloseCon($conn);
-    return $result;
+    $ch = curl_init();
+    //Set the URL that you want to GET by using the CURLOPT_URL option.
+    curl_setopt($ch, CURLOPT_URL, "http://www.nathandiamond.com/classes/272/company/api/getItems.php/?siteId=3&limit=5&order=v");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $json = json_decode($data, true);
+    if (count($json) > 0) {
+        return $json;
+    }
+    // $conn = OpenCon();
+    // $sql = "SELECT * FROM PopularProducts ORDER BY Count DESC LIMIT 5";
+    // $result = mysqli_query($conn, $sql);
+    // CloseCon($conn);
+    // return $result;
 }

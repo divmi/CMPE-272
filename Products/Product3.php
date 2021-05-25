@@ -7,7 +7,7 @@ require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
 addLastVisited("Music", "Products/Product3.php");
-addProductIntoDataBase("Music", "Products/Product3.php");
+addProductIntoDataBase("Music Solution Provider", "Products/Product3.php");
 addLastVistedProductToCommonDB("Product3");
 ?>
     <title>Music Solution Provider</title>

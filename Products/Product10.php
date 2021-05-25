@@ -6,11 +6,11 @@
 require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
-addLastVisited("Restaurent", "Products/Product10.php");
-addProductIntoDataBase("Restaurent", "Products/Product10.php");
+addLastVisited("Restaurent Business Solutions", "Products/Product10.php");
+addProductIntoDataBase("Restaurant", "Products/Product10.php");
 addLastVistedProductToCommonDB("Product10");
 ?>
-    <title>Restaurent</title>
+    <title>Restaurant Business Solutions</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
@@ -170,13 +170,13 @@ addLastVistedProductToCommonDB("Product10");
             <div class="col-lg-6">
                 <div class="row">
                     <h3 style="margin-right: 370px;
-    margin-left: 10px;">Restaurent Bussiness Solution</h3>
+    margin-left: 10px;">Restaurant Bussiness Solution</h3>
                     <?php
 getAverageRating("http://www.nathandiamond.com/classes/272/company/api/getReviews.php/?siteId=3&productId=Product10")
 ?>
                 </div>
                 <hr class="line-heading">
-                <h6>What is Restaurent Solution provider</h6>
+                <h6>What is Restaurant Solution provider</h6>
                 <p>For many businesses, expansion is part of the plan from day one. For restaurant owners, however,
                     thoughts of opening one or more new locations or adding new services such as catering or hosting
                     special events may not arise until the business has begun to establish itself. Then the challenge

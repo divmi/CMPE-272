@@ -7,7 +7,7 @@ require '../Auth.php';
 include '../Cookie.php';
 include '../review.php';
 addLastVisited("Travel", "Products/Product7.php");
-addProductIntoDataBase("Travel", "Products/Product7.php");
+addProductIntoDataBase("Travel Company Solutions", "Products/Product7.php");
 addLastVistedProductToCommonDB("Product7");
 ?>
     <title>Registration system PHP and MySQL</title>
