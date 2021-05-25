@@ -87,7 +87,8 @@ $flower = "http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.co
                         <div class="card-body" style="height:320px;width:335px">
                             <h3 class="card-title">Aria(By Divya Mittal)</h3>
                             <p>Aria is a top consultancy company specializing in business
-                                growth using online marketing and conversion optimization tactics</p>
+                                growth using online marketing and conversion optimization tactics.Aria will help you for
+                                your business growth.</p>
                             <a class="btn-solid-lg page-scroll" href="home.php">Visit</a>
                         </div>
                     </div>
