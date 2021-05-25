@@ -202,9 +202,9 @@ while ($data = mysqli_fetch_array($result)) {
     echo '<td>' . "Local" . '</td>';
     echo '</tr>';
 }
-FindCurlUser("http://www.nathandiamond.com/classes/272/company/api/showUserFromALLSites.php", "Nate's Site");
+FindCurlUser("http://www.nathandiamond.com/classes/272/company/api/users.php", "Nate's Site");
 FindCurlUser("http://sarahlau-se.com/?page_id=145", "Sarah's Site");
-FindCurlUser("http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com/myshowUserFromALLSites.php", "Hemakshi's site");
+FindCurlUser("http://transientsearch-env.eba-cdxnyivi.us-east-2.elasticbeanstalk.com/myusers.php", "Hemakshi's site");
 ?>
                             <table>
                                 <tbody>
