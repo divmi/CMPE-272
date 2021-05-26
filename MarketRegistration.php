@@ -53,8 +53,12 @@ if (mysqli_num_rows($result) > 0) {
         $context = stream_context_create($options);
         $result = file_get_contents($url, false, $context);
         $response = json_decode($result);
-        header("Location: Registration.php?success=Your account has been created successfully");
-        exit();
+        if (!$result) {
+            header("Location: Registration.php?error=Username already Registered");
+        } else {
+            header("Location: Registration.php?success=Your account has been created successfully");
+        }
+
     } else {
         header("Location: Registration.php?error=unknown error occurred&$email");
         exit();
