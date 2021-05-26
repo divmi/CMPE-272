@@ -136,7 +136,7 @@ function getMostPopularProductsAcrossMarketPlace($url)
         foreach ($json as $row) {
             $value = substr($row["AvgRating"], 0, -3);
             echo '<tr>';
-            echo '<td><a href=' . $row["ProductLink"] . '>' . $row["ProductName"] . '</a></td>';
+            echo '<td><a style="    text-decoration: none;" href=' . $row["ProductLink"] . '>' . $row["ProductName"] . '</a></td>';
             echo '<td>' . $row["SiteName"] . '</td>';
             echo '<td>' . $value . '<i class="fa fa-star" style="color:orange;"></i></td>';
             echo '<td>' . $row["NumRatings"] . '</td>';

@@ -457,7 +457,9 @@ background-size: cover;">
 include 'Cookie.php';
 $json = getLastVisitedAll();
 foreach ($json as $row) {?>
-                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
+                                <a style="text-decoration: none;"
+                                    href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?>
+                                </a></br>
                                 <?php
 }
 ?>
@@ -473,7 +475,9 @@ foreach ($json as $row) {?>
                                 <?php
 $json = getMostPopularProducts();
 foreach ($json as $row) {?>
-                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
+                                <a style="text-decoration: none;"
+                                    href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?>
+                                </a></br>
                                 <?php
 }
 ?>
@@ -488,7 +492,9 @@ foreach ($json as $row) {?>
                                 <?php
 $json = getMostPopularProductsPerRating();
 foreach ($json as $row) {?>
-                                <a href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?> </a></br>
+                                <a style="text-decoration: none;"
+                                    href="<?php echo $row['ProductLink'] ?>"><?php echo $row["ProductName"]; ?>
+                                </a></br>
                                 <?php
 }
 ?>
