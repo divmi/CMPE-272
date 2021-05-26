@@ -89,7 +89,7 @@
                                     </td>
                                     <td>
                                         <input type="text" class="form-control-input" id="firstName" name="firstName"
-                                            required>
+                                            max="45" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,7 +98,7 @@
                                     </td>
                                     <td>
                                         <input type="text" class="form-control-input" id="lastName" name="lastName"
-                                            required>
+                                            max="45" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -115,7 +115,7 @@
                                     </td>
                                     <td>
                                         <input type="text" class="form-control-input" id="userName" name="userName"
-                                            required>
+                                            max="100" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -124,7 +124,7 @@
                                     </td>
                                     <td>
                                         <input type="password" class="form-control-input" id="password" name="password"
-                                            required>
+                                            min="6" max="12" required>
                                     </td>
                                 </tr>
                                 <tr>
