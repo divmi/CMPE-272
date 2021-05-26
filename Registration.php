@@ -71,9 +71,12 @@
 
     <div id="intro" class="basic-1">
         <form id="userForm" method="post" action="MarketRegistration.php" data-toggle="validator" data-focus="false">
-            <div class="container" style="margin-left:400px">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-4">
+                        <img src="images/Register.png" style="margin-left:-200px" width="700px"></img>
+                    </div>
+                    <div class="col-lg-5" tyle="margin-left:500px">
                         <?php if (isset($_GET['error'])) {?>
                         <p class="error"><?php echo $_GET['error']; ?></p>
                         <?php }?>

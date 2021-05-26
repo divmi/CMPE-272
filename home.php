@@ -450,7 +450,8 @@ background-size: cover;">
                     <div class="row">
                         <div class="col-4">
                             <h4>
-                                Previously Visited Products <br /> </h4>
+                                Previously Visited Products <i class="fa fa-history" style="color:green;"
+                                    aria-hidden="true"></i> <br /> </h4>
                             <p>
                                 <?php
 include 'Cookie.php';
@@ -465,7 +466,9 @@ foreach ($json as $row) {?>
                         </div>
                         <div class="col-4">
                             <h4>
-                                Most Popular Products Based on Visit <br /> </h4>
+                                Most Popular Products Based on Visit<i class="fa fa-star" style="color:orange;"></i>
+                                <br />
+                            </h4>
                             <p>
                                 <?php
 $json = getMostPopularProducts();
@@ -478,7 +481,9 @@ foreach ($json as $row) {?>
                         </div>
                         <div class="col-4">
                             <h4>
-                                Most Popular Products Based on Rating <br /> </h4>
+                                Most Popular Products Based on Rating <i class="fa fa-star" style="color:orange;"></i>
+                                <br />
+                            </h4>
                             <p>
                                 <?php
 $json = getMostPopularProductsPerRating();

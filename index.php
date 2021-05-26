@@ -71,8 +71,10 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-3"></div>
-            <div id="project-1" class="form-2 col-lg-5" style="margin-top:50px">
+            <div class="col-lg-4" style="margin-top:140px">
+                <image src="images/Login.jpeg"></img>
+            </div>
+            <div id="project-1" class="form-2 col-lg-6" style="margin-top:50px">
                 <p style="font-size: 13pt">
                     Please login to view different products and services offered
                     <br />
@@ -85,7 +87,7 @@
                     <strong>Password: </strong> <input class="form-control" type="password" name="PASSWORD" required />
                     <input style="margin-top:20px" class="btn btn-primary" type="submit" name="submit" value="Login" />
                     <br />
-                    <a class="" href="Registration.php">No account? Signup</a>
+                    <a class="" href="Registration.php">Not Registered yet? Signup</a>
 
                 </form>
             </div>

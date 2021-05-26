@@ -163,89 +163,102 @@
     </nav>
 
     <div id="intro" class="basic-1">
-        <form id="userForm" method="post" action="registerDatabase.php" data-toggle="validator" data-focus="false">
-            <?php if (isset($_GET['error'])) {?>
-            <p class="error"><?php echo $_GET['error']; ?></p>
-            <?php }?>
-
-            <?php if (isset($_GET['success'])) {?>
-            <p class="success"><?php echo $_GET['success']; ?></p>
-            <?php }?>
-
-            <div class="container">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label for="firstName">First Name</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control-input" id="firstName" name="firstName" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="lastName">Last Name</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control-input" id="lastName" name="lastName" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="email">Email</label>
-                            </td>
-                            <td>
-                                <input type="email" class="form-control-input" id="email" name="email" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="email">Password</label>
-                            </td>
-                            <td>
-                                <input type="password" class="form-control-input" id="password" name="password"
-                                    required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="address">Address</label>
-                            </td>
-                            <td>
-                                <input type="textarea" class="form-control-input" id="address" name="address" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="homePhone">Home Phone</label>
-                            </td>
-                            <td>
-                                <input type="number" class="form-control-input" id="homePhone" name="homePhone"
-                                    required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="cellPhone">Mobile Number</label>
-                            </td>
-                            <td>
-                                <input type="number" class="form-control-input" id="cellPhone" name="cellPhone"
-                                    required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"> <button type="submit" class="form-control-submit-button">Register</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="image/Register.png"></img>
             </div>
+            <div class="col-lg-8">
+                <form id="userForm" method="post" action="registerDatabase.php" data-toggle="validator"
+                    data-focus="false">
+                    <?php if (isset($_GET['error'])) {?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                    <?php }?>
 
-            <div class="form-message">
-                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                    <?php if (isset($_GET['success'])) {?>
+                    <p class="success"><?php echo $_GET['success']; ?></p>
+                    <?php }?>
+
+                    <div class="container">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="firstName">First Name</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control-input" id="firstName" name="firstName"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="lastName">Last Name</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control-input" id="lastName" name="lastName"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email</label>
+                                    </td>
+                                    <td>
+                                        <input type="email" class="form-control-input" id="email" name="email" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Password</label>
+                                    </td>
+                                    <td>
+                                        <input type="password" class="form-control-input" id="password" name="password"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="address">Address</label>
+                                    </td>
+                                    <td>
+                                        <input type="textarea" class="form-control-input" id="address" name="address"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="homePhone">Home Phone</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control-input" id="homePhone" name="homePhone"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="cellPhone">Mobile Number</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control-input" id="cellPhone" name="cellPhone"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"> <button type="submit"
+                                            class="form-control-submit-button">Register</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="form-message">
+                        <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
+
     </div>
 </body>
 
